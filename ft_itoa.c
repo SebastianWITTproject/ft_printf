@@ -6,11 +6,11 @@
 /*   By: seb <seb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:19:11 by switt             #+#    #+#             */
-/*   Updated: 2023/06/18 23:55:27 by seb              ###   ########.fr       */
+/*   Updated: 2023/06/20 17:44:11 by seb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <stdlib.h>
 
 static int	size(long int nbr)

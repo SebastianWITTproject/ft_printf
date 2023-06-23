@@ -6,11 +6,11 @@
 /*   By: seb <seb@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:34:58 by switt             #+#    #+#             */
-/*   Updated: 2023/06/18 23:52:36 by seb              ###   ########.fr       */
+/*   Updated: 2023/06/20 17:44:31 by seb              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	ft_strlen(char *str)
 {

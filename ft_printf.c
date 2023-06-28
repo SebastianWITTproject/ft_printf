@@ -43,6 +43,8 @@ int	ft_printf(const char *str, ...)
 	i = 0;
 	calc_length = 0;
 	va_start(args, str);
+	if (!str)
+		return (-1);
 	while (str[i])
 	{
 		if (str[i] == '%')

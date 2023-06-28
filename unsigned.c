@@ -1,5 +1,6 @@
 #include "ft_printf.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 static int	size(unsigned int nbr)
 {
@@ -69,7 +70,7 @@ int	ft_print_unsigned(unsigned int nbr)
 		calc_length += write(1, "0", 1);
 	else
 	{
-		num = ft_itoa(nbr);
+		num = ft_un_itoa(nbr);
 		calc_length += printstr(num);
 		free(num);
 	}

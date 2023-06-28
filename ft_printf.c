@@ -30,7 +30,7 @@ int	ft_formats(va_list *args, const char format)
     else if (format == '%')
 		calc_length += percent();
     else if (format == 'p')
-		calc_length += ft_print_ptr(va_arg(*args, void *));
+		calc_length += ft_print_ptr(va_arg(*args, void*));
 	return (calc_length);
 }
 

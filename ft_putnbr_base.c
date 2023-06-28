@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
-static int	ft_strlen(char *str)
+static unsigned int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -69,13 +70,11 @@ static int	isvalid(char *base)
 	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(unsigned int nb, char *base)
 {
-	int			size;
-	long int	nb;
-
+	unsigned int			size;
+	
 	size = ft_strlen(base);
-	nb = nbr;
 	if (isvalid(base))
 	{
 		if (nb < 0)

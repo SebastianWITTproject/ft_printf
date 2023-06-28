@@ -3,9 +3,9 @@
 
 int main ()
 {
-   
-    ft_printf(" %s %s\n", "", "-");
-   printf("%s%s", "", "-");
+
+ft_printf("%x", 0);
+
 
     return 0;
 }

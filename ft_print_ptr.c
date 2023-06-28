@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	calc_ptr_len(unsigned long num)
+int	calc_ptr_len(unsigned long int num)
 {
 	int	len;
 
@@ -16,9 +16,9 @@ int	calc_ptr_len(unsigned long num)
 int	ft_print_ptr(void *ptr)
 {
 	int	calc_length;
-    unsigned long ptr_cast; 
+    unsigned long int ptr_cast; 
 
-    ptr_cast = (unsigned long)ptr;
+    ptr_cast = (unsigned long int)ptr;
 	calc_length = 0;
 	write(1, "0x", 2);
     calc_length += 2;

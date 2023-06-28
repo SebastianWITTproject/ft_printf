@@ -15,6 +15,11 @@ int	calc_hex_len(unsigned	int num)
 
 int	ft_print_hex(unsigned int num, const char caps)
 {
+	if (num == 0)
+	{
+		write(1, "0", 1);
+		return (1);
+	}
 	if (caps == 'X')
     {
         ft_putnbr_base(num, "0123456789ABCDEF");

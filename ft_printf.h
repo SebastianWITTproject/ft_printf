@@ -6,7 +6,7 @@
 
 int	ft_print_hex(unsigned int num, const char caps);
 int	calc_hex_len(unsigned	int num);
-int	ft_formats(va_list args, const char format);
+int	ft_formats(va_list *args, const char format);
 int	ft_printf(const char *str, ...);
 char	*ft_itoa(int nbr);
 void	ft_putnbr_base(int nbr, char *base);

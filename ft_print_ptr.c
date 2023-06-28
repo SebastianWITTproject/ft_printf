@@ -1,7 +1,8 @@
 #include "ft_printf.h"
+#include <stdio.h>
 
-int	calc_ptr_len(unsigned long int num)
-{
+static int	calc_ptr_len(unsigned long long int num)
+{ 
 	int	len;
 
 	len = 0;
@@ -13,21 +14,39 @@ int	calc_ptr_len(unsigned long int num)
 	return (len);
 }
 
-int	ft_print_ptr(void *ptr)
+static void	ft_putptr_base(unsigned long long int nb)
+{
+	char *base;
+
+	base = "0123456789abcdef";
+
+		if (nb >= 16)
+		{
+			ft_putptr_base(nb / 16);
+			ft_putptr_base(nb % 16);
+		}
+		else
+			write(1, &base[nb], 1);
+}
+
+
+int	ft_print_ptr(unsigned long long int ptr)
 {
 	int	calc_length;
-    unsigned long int ptr_cast; 
-
-    ptr_cast = (unsigned long int)ptr;
 	calc_length = 0;
+	if (ptr == 0)
+	{
+		calc_length += write(1, "(nil)", 5);
+		return (calc_length);
+	}
 	write(1, "0x", 2);
     calc_length += 2;
 	if (ptr == 0)
-		calc_length += write(1, "0", 1);
+		calc_length += write(1, "(nil)", 5);
 	else
 	{
-        calc_length += calc_ptr_len(ptr_cast);
-		ft_putnbr_base(ptr_cast, "0123456789abcdef");
+        calc_length += calc_ptr_len(ptr);
+		ft_putptr_base(ptr);
 	}
 	return (calc_length);
 }

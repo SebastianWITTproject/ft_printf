@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seb <seb@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: switt <switt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:34:58 by switt             #+#    #+#             */
-/*   Updated: 2023/06/20 17:44:31 by seb              ###   ########.fr       */
+/*   Updated: 2023/06/28 23:00:25 by switt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static unsigned int	ft_strlen(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		i ++;
+		i++;
 	}
 	return (i);
 }
@@ -32,11 +32,11 @@ static int	check(char *base, char c, int index)
 	i = 0;
 	while (i < index)
 	{
-		if (base [i] == c)
+		if (base[i] == c)
 		{
 			return (0);
 		}
-	i ++;
+		i++;
 	}
 	return (1);
 }
@@ -50,30 +50,30 @@ static int	isvalid(char *base)
 	{
 		return (0);
 	}
-	while (base [i] != '\0')
+	while (base[i] != '\0')
 	{
 		if (base[i] <= 32 || base[i] == 127 || base[i] == '+' || base[i] == '-')
 		{
 			return (0);
 		}
-	i ++;
+		i++;
 	}
 	i = 0;
-	while (base [i] != '\0')
+	while (base[i] != '\0')
 	{
-		if (!check(base, base [i], i))
+		if (!check(base, base[i], i))
 		{
 			return (0);
-		}	
-	i ++;
+		}
+		i++;
 	}
 	return (1);
 }
 
 void	ft_putnbr_base(unsigned int nb, char *base)
 {
-	unsigned int			size;
-	
+	unsigned int	size;
+
 	size = ft_strlen(base);
 	if (isvalid(base))
 	{

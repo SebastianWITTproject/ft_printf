@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   unsigned.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: switt <switt@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/28 22:58:58 by switt             #+#    #+#             */
+/*   Updated: 2023/06/28 22:59:00 by switt            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 static int	size(unsigned int nbr)
 {
@@ -38,8 +50,8 @@ static int	convert(int len, char *string, unsigned int nbr)
 
 char	*ft_un_itoa(unsigned int nbr)
 {
-	char		*string;
-	int			len;
+	char	*string;
+	int		len;
 
 	len = size(nbr);
 	if (nbr == 0)

@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_ptr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: switt <switt@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/28 22:58:20 by switt             #+#    #+#             */
+/*   Updated: 2023/06/28 22:58:22 by switt            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include <stdio.h>
 
 static int	calc_ptr_len(unsigned long long int num)
-{ 
+{
 	int	len;
 
 	len = 0;
@@ -16,23 +28,22 @@ static int	calc_ptr_len(unsigned long long int num)
 
 static void	ft_putptr_base(unsigned long long int nb)
 {
-	char *base;
+	char	*base;
 
 	base = "0123456789abcdef";
-
-		if (nb >= 16)
-		{
-			ft_putptr_base(nb / 16);
-			ft_putptr_base(nb % 16);
-		}
-		else
-			write(1, &base[nb], 1);
+	if (nb >= 16)
+	{
+		ft_putptr_base(nb / 16);
+		ft_putptr_base(nb % 16);
+	}
+	else
+		write(1, &base[nb], 1);
 }
-
 
 int	ft_print_ptr(unsigned long long int ptr)
 {
 	int	calc_length;
+
 	calc_length = 0;
 	if (ptr == 0)
 	{
@@ -40,12 +51,12 @@ int	ft_print_ptr(unsigned long long int ptr)
 		return (calc_length);
 	}
 	write(1, "0x", 2);
-    calc_length += 2;
+	calc_length += 2;
 	if (ptr == 0)
 		calc_length += write(1, "(nil)", 5);
 	else
 	{
-        calc_length += calc_ptr_len(ptr);
+		calc_length += calc_ptr_len(ptr);
 		ft_putptr_base(ptr);
 	}
 	return (calc_length);

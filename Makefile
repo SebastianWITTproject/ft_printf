@@ -19,9 +19,6 @@ $(NAME): $(OFILES)
 
 $(OFILES): $(CFILES)
 	cc $(FLAGS) -c $(CFILES) -I.
-
-test : fclean all
-	cc test.c -L. -lftprintf -lbsd -o a.out
 	
 clean:
 	rm -f $(OFILES)

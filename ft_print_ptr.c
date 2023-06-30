@@ -6,12 +6,11 @@
 /*   By: switt <switt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 22:58:20 by switt             #+#    #+#             */
-/*   Updated: 2023/06/28 22:58:22 by switt            ###   ########.fr       */
+/*   Updated: 2023/06/30 16:59:33 by switt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static int	calc_ptr_len(unsigned long long int num)
 {

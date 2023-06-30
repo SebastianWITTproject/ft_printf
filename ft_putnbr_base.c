@@ -6,12 +6,11 @@
 /*   By: switt <switt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:34:58 by switt             #+#    #+#             */
-/*   Updated: 2023/06/28 23:00:25 by switt            ###   ########.fr       */
+/*   Updated: 2023/06/30 16:59:52 by switt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 static unsigned int	ft_strlen(char *str)
 {
